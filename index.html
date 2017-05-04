@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <title>Subwait</title>
     <style>
       #mapContainer {
@@ -16,63 +17,19 @@
   </head>
   <body>
     <div id='mapContainer'>
-      <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
       <script src="lib/routes.geojson"></script>
       <script>
-      // debugger
-      // let myStyle = {
-      // //       "color": "#ff7800",
-      // //       "weight": 2,
-      // //       "opacity": 0.65 };
-      // // const color = () => {
-      //
-      // let lines, stops;
-      //
-      // const setFeatures = (() => {
-      //   let linesLayer = new L.geoJson(lines).addTo(m);
-      //
-      //   //set the colors for each line based on the route_id property
-      //   linesLayer.setStyle(function(feature){
-      //     switch (feature.properties.route_id) {
-      //       case "1": return {color: "#EE352E"};
-      //       case "2": return {color: "#EE352E"};
-      //       case "3": return {color: "#EE352E"};
-      //       case "4": return {color: "#00933C"};
-      //       case "5": return {color: "#00933C"};
-      //       case "6": return {color: "#00933C"};
-      //       case "B": return {color: "#FF6319"};
-      //       case "D": return {color: "#FF6319"};
-      //       case "F": return {color: "#FF6319"};
-      //       case "M": return {color: "#FF6319"};
-      //       case "A": return {color: "#2850AD"};
-      //       case "C": return {color: "#2850AD"};
-      //       case "E": return {color: "#2850AD"};
-      //       case "G": return {color: "#6CBE45"};
-      //       case "J": return {color: "#996633"};
-      //       case "Z": return {color: "#996633"};
-      //       case "L": return {color: "#A7A9AC"};
-      //       case "N": return {color: "#FCCC0A"};
-      //       case "Q": return {color: "#FCCC0A"};
-      //       case "R": return {color: "#FCCC0A"};
-      //       case "S": return {color: "#808183"};
-      //       case "7": return {color: "#A7A9AC"};
-      //     }
-      //   });
-      // });
-      //
-      //   setFeatures = (callback) => {
-      //      lines = JSON.parse(routes);
-      //     //  stops = JSON.parse(myReallyLongStopsGeoJsonGoesHere);
-      //      callback();
-      //   }
+
         // instantiate the map
         let map = L.map('mapContainer').setView([40.7128, -74.0059], 13);
 
+        // Import CARTO maps
         let layer = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
           maxZoom: 18,
           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
         }).addTo(map);
-        debugger
+
+        // Style the different lines
         L.geoJSON(routes, {
             style: function(feature) {
                 switch (feature.properties.route_id) {
@@ -106,63 +63,6 @@
                 }
             }
         }).addTo(map);
-
-        // var lines,stops;
-        // setFeatures(function(){
-        //
-        //     var linesLayer = new L.geoJson(lines).addTo(m);
-        //
-        //     //set the colors for each line based on the route_id property
-        //     linesLayer.setStyle(function(feature){
-        //         switch (feature.properties.route_id) {
-        //             case "1": return {color: "#EE352E"};
-        //             case "2": return {color: "#EE352E"};
-        //             case "3": return {color: "#EE352E"};
-        //             case "4": return {color: "#00933C"};
-        //             case "5": return {color: "#00933C"};
-        //             case "6": return {color: "#00933C"};
-        //             case "B": return {color: "#FF6319"};
-        //             case "D": return {color: "#FF6319"};
-        //             case "F": return {color: "#FF6319"};
-        //             case "M": return {color: "#FF6319"};
-        //             case "A": return {color: "#2850AD"};
-        //             case "C": return {color: "#2850AD"};
-        //             case "E": return {color: "#2850AD"};
-        //             case "G": return {color: "#6CBE45"};
-        //             case "J": return {color: "#996633"};
-        //             case "Z": return {color: "#996633"};
-        //             case "L": return {color: "#A7A9AC"};
-        //             case "N": return {color: "#FCCC0A"};
-        //             case "Q": return {color: "#FCCC0A"};
-        //             case "R": return {color: "#FCCC0A"};
-        //             case "S": return {color: "#808183"};
-        //             case "7": return {color: "#A7A9AC"};
-        //         }
-        //     });
-        //
-        //     var stopsLayer = new L.geoJson(stops,{
-        //         pointToLayer: function (feature, latlng) {
-        //             return new L.CircleMarker(latlng, {
-        //                 radius: 5,
-        //                 fillColor: "#FFFFFF",
-        //                 color: "#000",
-        //                 weight: 3,
-        //                 opacity: 1,
-        //                 fillOpacity: 1
-        //             });
-        //         }
-        //     }).addTo(m);
-        // });
-        //
-        // function setFeatures(callback) {
-        //    lines = JSON.parse(routes);
-        //    stops = JSON.parse(routes);
-        //    callback();
-        // }
-
-        // L.geoJson(routes, {
-        //   style: myStyle
-        // }).addTo(map);
       </script>
     </div>
   </body>

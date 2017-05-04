@@ -1,0 +1,26 @@
+{
+  "name": "Subwait",
+  "version": "1.0.0",
+  "description": "### Background",
+  "main": "subwait.js",
+  "dependencies": {
+    "webpack-dev-server": "^2.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "start": "webpack-dev-server --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsa2135/Subwait.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsa2135/Subwait/issues"
+  },
+  "homepage": "https://github.com/rsa2135/Subwait#readme"
+}
