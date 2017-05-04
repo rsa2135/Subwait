@@ -4,6 +4,10 @@
   "description": "### Background",
   "main": "subwait.js",
   "dependencies": {
+    "d3": "^4.8.0",
+    "gtfs-realtime-bindings": "0.0.4",
+    "json-loader": "^0.5.4",
+    "leaflet": "^1.0.3",
     "webpack-dev-server": "^2.4.5"
   },
   "devDependencies": {},

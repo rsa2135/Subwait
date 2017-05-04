@@ -1,10 +1,19 @@
 module.exports = {
   context: __dirname,
-  entry: "./subwait.js",
+  entry: "./lib/subwait.js",
   output: {
     filename: "./bundle.js"
   },
+ module: {
+  loaders: [
+    {
+      test: /\.geojson$/,
+      loader: 'json-loader'
+      },
+    ]
+  },
   resolve: {
-    extensions: [".js", ".jsx", "*"]
-  }
+    extensions: [".js", ".jsx", ".geojson", "*"]
+  },
+  devtool: 'source-map'
 };
