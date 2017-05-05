@@ -1,7 +1,63 @@
-#mapContainer {
+/*#mapContainer {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}*/
+
+html,
+  body {
+      height: 100%;
+      width: 100%;
+      position: relative;
+  }
+  body {
+      margin: 0;
+  }
+  #mapContainer {
+      width: 100%;
+      height: 100%;
+      /*position: relative;*/
+  }
+
+  #clock {
+    width: 150px;
+    text-align: center;
+    position: absolute;
+    border: 1px solid black;
+    z-index: 401;
+  }
+  svg {
+      position: relative;
+  }
+  /*path {
+      fill: yellow;
+      stroke-width: 2px;
+      stroke: red;
+      stroke-opacity: 1;*/
+  }
+  .travelMarker {
+      fill: yellow;
+      opacity: 0.75;
+  }
+  .waypoints {
+      fill: black;
+      opacity: 0;
+  }
+}
+.drinks {
+  stroke: black;
+  fill: red;
+}
+.lineConnect {
+  fill: none;
+  stroke: black;
+  opacity: 1;
+}
+.locnames {
+  fill: black;
+  text-shadow: 1px 1px 1px #FFF, 3px 3px 5px #000;
+  font-weight: bold;
+  font-size: 13px;
 }

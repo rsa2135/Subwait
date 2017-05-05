@@ -1,0 +1,241 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2,
+        "STOP_ID": "101",
+        "STOP_NAME": "242ND STREET-BWAY (Van Cortland Park)",
+        "STOP_LAT": 40.889248,
+        "STOP_LON": -73.898583,
+        "NAME_CUR": "242ND STREET - VAN CORTLAND PARK",
+        "Routes_WKD": "1",
+        "Routes_OFF": "1",
+        "Routes_ALL": "1",
+        "Name_Prop": "242nd Street - Van Cortland Park",
+        "Route_Lbl": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.898583000005431,
+          40.889247999895304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3,
+        "STOP_ID": "103",
+        "STOP_NAME": "238TH STREET-BWAY",
+        "STOP_LAT": 40.884653,
+        "STOP_LON": -73.900878,
+        "NAME_CUR": "238TH STREET",
+        "Routes_WKD": "1",
+        "Routes_OFF": "1",
+        "Routes_ALL":"1",
+        "Name_Prop":"238th Street",
+        "Route_Lbl": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.900877999719853,
+          40.884653000235801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 11,
+        "STOP_ID": "112",
+        "STOP_NAME": "168TH STREET - BWAY- WASHINGTON HGTS",
+        "STOP_LAT": 40.840556,
+        "STOP_LON": -73.940133,
+        "NAME_CUR": "168TH STREET- WASHINGTON HGTS",
+        "Routes_WKD": "1",
+        "Routes_OFF": "1",
+        "Routes_ALL": "1",
+        "Name_Prop": "168th Street- Washington Hgts",
+        "Route_Lbl": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.940132999638195,
+          40.840556000059394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 14,
+        "STOP_ID": "115",
+        "STOP_NAME": "137TH STREET - BWAY (City College)",
+        "STOP_LAT": 40.822008,
+        "STOP_LON": -73.953676,
+        "NAME_CUR": "137TH STREET - CITY COLLEGE",
+        "Routes_WKD": "1",
+        "Routes_OFF": "1",
+        "Routes_ALL": "1",
+        "Name_Prop": "137th Street - City College",
+        "Route_Lbl": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.953676000047324,
+          40.822007999969287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 18,
+        "STOP_ID": "119",
+        "STOP_NAME": "103RD STREET - BWAY",
+        "STOP_LAT": 40.799446,
+        "STOP_LON": -73.968379,
+        "NAME_CUR": "103RD STREET",
+        "Routes_WKD": "1",
+        "Routes_OFF": "1",
+        "Routes_ALL": "1",
+        "Name_Prop": "103rd Street",
+        "Route_Lbl": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.968378999990819,
+          40.799446000032901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 19,
+        "STOP_ID": "120",
+        "STOP_NAME": "96TH STREET - BWAY",
+        "STOP_LAT": 40.793919,
+        "STOP_LON": -73.972323,
+        "NAME_CUR": "96TH STREET",
+        "Routes_WKD": "1, 2, 3",
+        "Routes_OFF": "1, 2, 3",
+        "Routes_ALL": "1, 2, 3",
+        "Name_Prop": "96th Street",
+        "Route_Lbl": "1, 2, 3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.972323000206245,
+          40.793918999662139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 23,
+        "STOP_ID": "124",
+        "STOP_NAME": "66TH STREET - BWAY (Lincoln Center)",
+        "STOP_LAT": 40.77344,
+        "STOP_LON": -73.982209,
+        "NAME_CUR": "66TH STREET - LINCOLN CENTER",
+        "Routes_WKD": "1",
+        "Routes_OFF": "1, 2",
+        "Routes_ALL": "1, 2",
+        "Name_Prop": "66th Street - Lincoln Center",
+        "Route_Lbl": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98220900014519,
+          40.773439999556388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 26,
+        "STOP_ID": "127",
+        "STOP_NAME": "42ND ST. - TIMES SQ.",
+        "STOP_LAT": 40.75529,
+        "STOP_LON": -73.987495,
+        "NAME_CUR": "42ND ST - TIMES SQ",
+        "Routes_WKD": "1, 2, 3",
+        "Routes_OFF": "1, 2, 3",
+        "Routes_ALL": "1, 2, 3",
+        "Name_Prop": "42nd St - Times Sq",
+        "Route_Lbl": "1, 2, 3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.987495000194087,
+          40.755289999833678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 36,
+        "STOP_ID": "137",
+        "STOP_NAME": "CHAMBERS STREET - IRT",
+        "STOP_LAT": 40.715478,
+        "STOP_LON": -74.009266,
+        "NAME_CUR": "CHAMBERS STREET",
+        "Routes_WKD": "1, 2, 3",
+        "Routes_OFF": "1, 2, 3",
+        "Routes_ALL": "1, 2, 3",
+        "Name_Prop": "Chambers Street",
+        "Route_Lbl": "1, 2, 3"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.009265999626166,
+          40.715478000309531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 40,
+        "STOP_ID": "142",
+        "STOP_NAME": "SOUTH FERRY TERMINAL",
+        "STOP_LAT": 40.701542,
+        "STOP_LON": -74.013506,
+        "NAME_CUR": "SOUTH FERRY TERMINAL",
+        "Routes_WKD": "1",
+        "Routes_OFF": "1",
+        "Routes_ALL": "1",
+        "Name_Prop": "South Ferry Terminal",
+        "Route_Lbl": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.013506000001883,
+          40.701541999763549
+        ]
+      }
+    }
+  ]
+}
