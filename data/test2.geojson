@@ -20,7 +20,9 @@
         "Routes_OFF": "1",
         "Routes_ALL": "1",
         "Name_Prop": "242nd Street - Van Cortland Park",
-        "Route_Lbl": "1"
+        "Route_Lbl": "1",
+        "this_stop_time": "5/30/13 0:00",
+        "next_stop_time": "5/30/13 0:02"
       },
       "geometry": {
         "type": "Point",
