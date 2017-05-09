@@ -195,6 +195,7 @@ d3.json('data/taxiday' + number + '.geojson', function (data) {
 
   map.on("viewreset", reset);
   map.on("zoomend", reset);
+
   reset();
 
   var i = 0;
@@ -226,207 +227,154 @@ d3.json('data/taxiday' + number + '.geojson', function (data) {
     marker.attr("transform", "translate(" + startPoint[0] + "," + startPoint[1] + ")");
 
     path.each(function(d){
-
-//add the translation of the map's g element
-startPoint[0] = startPoint[0]; //+ topLeft[0];
-startPoint[1] = startPoint[1]; //+ topLeft[1];
-var newLatLon = coordToLatLon(startPoint);
-pointsArray.push([newLatLon.lng,newLatLon.lat,d.properties.hasfare]);
-
-
-points = g.selectAll(".point")
-.data(pointsArray)
-.enter()
-.append('circle')
-.attr("r",5)
-.attr("class",function(d){
-    if(d[2]) {
-        return "startPoint point";
-    } else {
-        return "endPoint point";
-    }
-})
-.attr("transform",function(d){
-    return translatePoint(d);
-});
-
-if(d.properties.hasfare) { //transition marker to show full taxi
-    marker
-    .transition()
-    .duration(500)
-    .attr("r",5)
-    .attr('style','opacity:1');
+      //add the translation of the map's g element
+      startPoint[0] = startPoint[0]; //+ topLeft[0];
+      startPoint[1] = startPoint[1]; //+ topLeft[1];
+      var newLatLon = coordToLatLon(startPoint);
+      pointsArray.push([newLatLon.lng,newLatLon.lat,d.properties.hasfare]);
 
 
+      points = g.selectAll(".point")
+                .data(pointsArray)
+                .enter()
+                .append('circle')
+                .attr("r",5)
+                .attr("class",function(d){
+                  if(d[2]) {
+                      return "startPoint point";
+                  } else {
+                      return "endPoint point";
+                  }
+                })
+                .attr("transform",function(d){
+                    return translatePoint(d);
+                });
 
+      if(d.properties.hasfare) { //transition marker to show full taxi
+        marker
+          .transition()
+          .duration(500)
+          .attr("r",5)
+          .attr('style','opacity:1');
+      } else { //Transition marker to show empty taxi
+        marker
+        .transition()
+        .duration(500)
+        .attr("r",40)
+        .attr('style','opacity:.3');
+      }
+    });
 
+    function transition(path) {
+      g.selectAll
 
+      path.transition()
 
-
-} else { //Transition marker to show empty taxi
-
-    marker
-    .transition()
-    .duration(500)
-    .attr("r",40)
-    .attr('style','opacity:.3');
-
-}
-});
-
-
-
-
-function transition(path) {
-
-    g.selectAll
-
-    path.transition()
-    .duration(function(d){
+      .duration(function(d){
         //calculate seconds
         var start = Date.parse(d.properties.pickuptime),
         finish = Date.parse(d.properties.dropofftime),
         duration = finish - start;
-
         duration = duration/60000; //convert to minutes
-
         duration = duration * (1/timeFactor) * 1000;
-
-
         time = moment(d.properties.pickuptime.toString());
-
-
-
         $('.readableTime').text(time.format('h:mm a'));
-
-
         return (duration);
-})
-    .attrTween("stroke-dasharray", tweenDash)
-    .each("end", function (d) {
-
+      })
+      .attrTween("stroke-dasharray", tweenDash)
+      .each("end", function (d) {
         if(d.properties.hasfare) {
-
-            running.fare += parseFloat(d.properties.fare);
-            running.surcharge += parseFloat(d.properties.surcharge);
-            running.mtatax += parseFloat(d.properties.mtatax);
-            running.tip += parseFloat(d.properties.tip);
-            running.tolls += parseFloat(d.properties.tolls);
-            running.total += parseFloat(d.properties.total);
-            running.passengers += parseFloat(d.properties.passengers);
-
-
-
-            for(var p = 0;p<d.properties.passengers;p++){
-                $('.passengerGlyphs').append('<span class="glyphicon glyphicon-user"></span>');
-            }
-
-            updateRunning();
-
-
-
+          running.fare += parseFloat(d.properties.fare);
+          running.surcharge += parseFloat(d.properties.surcharge);
+          running.mtatax += parseFloat(d.properties.mtatax);
+          running.tip += parseFloat(d.properties.tip);
+          running.tolls += parseFloat(d.properties.tolls);
+          running.total += parseFloat(d.properties.total);
+          running.passengers += parseFloat(d.properties.passengers);
+          for(var p = 0;p<d.properties.passengers;p++){
+            $('.passengerGlyphs').append('<span class="glyphicon glyphicon-user"></span>');
+          }
+          updateRunning();
         };
         i++;
 
         var nextPath = svg.select("path.trip" + i);
         if (nextPath[0][0]==null){
-            clearTimeout(timer);
+          clearTimeout(timer);
         } else {
-            iterate();
+          iterate();
         }
-
-
-    });
-
-}
-
-function tweenDash(d) {
-
-    var l = path.node().getTotalLength();
-var i = d3.interpolateString("0," + l, l + "," + l); // interpolation of stroke-dasharray style attr
-return function (t) {
-    var marker = d3.select("#marker");
-    var p = path.node().getPointAtLength(t * l);
-marker.attr("transform", "translate(" + p.x + "," + p.y + ")");//move marker
-
-
-if (tweenToggle == 0) {
-    tweenToggle = 1;
-    var newCenter = map.layerPointToLatLng(new L.Point(p.x,p.y));
-
-    map.panTo(newCenter, 14);
-} else {
-    tweenToggle = 0;
-}
-
-
-//update chart data every X frames
-if(chartInterval == 5){
-
-    chartInterval = 0;
-
-
-
-    var decimalHour = parseInt(time.format('H')) + parseFloat(time.format('m')/60)
-
-
-
-
-    if(isNaN(d.properties.fare)){
-        d.properties.fare = 0;
+      });
     }
 
-    var incrementalFare = d.properties.fare*t;
+    function tweenDash(d) {
+      var l = path.node().getTotalLength();
+      var i = d3.interpolateString("0," + l, l + "," + l); // interpolation of stroke-dasharray style attr
 
+      return function (t) {
+        var marker = d3.select("#marker");
+        var p = path.node().getPointAtLength(t * l);
+        marker.attr("transform", "translate(" + p.x + "," + p.y + ")");//move marker
 
-    dummyData.push({
-        "time": decimalHour,
-        "runningFare": running.fare + parseFloat(incrementalFare)
-    });
+        if (tweenToggle == 0) {
+          tweenToggle = 1;
+          var newCenter = map.layerPointToLatLng(new L.Point(p.x,p.y));
+          map.panTo(newCenter, 14);
+        } else {
+          tweenToggle = 0;
+        }
+        //update chart data every X frames
+        if(chartInterval == 5) {
+          chartInterval = 0;
+          var decimalHour = parseInt(time.format('H')) + parseFloat(time.format('m')/60)
 
+            if(isNaN(d.properties.fare)){
+              d.properties.fare = 0;
+            }
 
-chartPath.attr("d", area); //redraw area chart
-if(d.properties.hasfare == false) { //draw purple area for nonfare time
-    emptyData.push({
-        "time": decimalHour,
-        "runningFare": running.fare + parseFloat(incrementalFare)
-    });
+          var incrementalFare = d.properties.fare*t;
 
-    emptyPath.attr("d", area);
-}
+          dummyData.push({
+            "time": decimalHour,
+            "runningFare": running.fare + parseFloat(incrementalFare)
+          });
 
-markerLine
-.attr('x1', x(decimalHour))
-.attr('x2', x(decimalHour));
+          chartPath.attr("d", area); //redraw area chart
+          if(d.properties.hasfare == false) { //draw purple area for nonfare time
+            emptyData.push({
+              "time": decimalHour,
+              "runningFare": running.fare + parseFloat(incrementalFare)
+            });
 
+            emptyPath.attr("d", area);
+          }
 
+          markerLine
+            .attr('x1', x(decimalHour))
+            .attr('x2', x(decimalHour));
 
+        } else {
+          chartInterval++;
+        }
 
-} else {
-    chartInterval++;
-}
+        return i(t);
+      }
+    }
 
+  }
 
-return i(t);
-}
-}
+  updateRunning();
 
-}
-
-updateRunning();
-
-$('#begin').click(function(){
+  $('#begin').click(function(){
     $('.overlay').fadeOut(250);
     $('.box').fadeIn(250);
     setTimeout(function(){
-        updateTimer();
-        iterate();
+      updateTimer();
+      iterate();
     },500);
+  });
 
-});
-
-
-function updateRunning() {
+  function updateRunning() {
     $('.runningFare').text('$'+running.fare.toFixed(2));
     $('.runningSurcharge').text('$'+running.surcharge.toFixed(2));
     $('.runningTax').text('$'+running.mtatax.toFixed(2));
@@ -434,18 +382,18 @@ function updateRunning() {
     $('.runningTolls').text('$'+running.tolls.toFixed(2));
     $('.runningTotal').text('$'+running.total.toFixed(2));
     $('.runningPassengers').text(running.passengers);
-}
+  }
 
 // Reposition the SVG to cover the features.
-function reset() {
+  function reset() {
     var bounds = d3path.bounds(data);
     topLeft = bounds[0],
     bottomRight = bounds[1];
 
     svg.attr("width", bottomRight[0] - topLeft[0] + 100)
-    .attr("height", bottomRight[1] - topLeft[1] + 100)
-    .style("left", topLeft[0]-50 + "px")
-    .style("top", topLeft[1]-50 + "px");
+       .attr("height", bottomRight[1] - topLeft[1] + 100)
+       .style("left", topLeft[0]-50 + "px")
+       .style("top", topLeft[1]-50 + "px");
 
     g.attr("transform", "translate(" + (-topLeft[0]+50) + "," + (-topLeft[1]+50)+ ")");
 
@@ -453,33 +401,24 @@ function reset() {
 
     //TODO: Figure out why this doesn't work as points.attr...
     g.selectAll(".point")
-    .attr("transform",function(d){
-        return translatePoint(d);
-    });
-
-
-}
-
-
-
-
+     .attr("transform",function(d){
+       return translatePoint(d);
+     });
+  }
 });
+
 // Use Leaflet to implement a D3 geometric transformation.
 function projectPoint(x, y) {
-    var point = map.latLngToLayerPoint(new L.LatLng(y, x));
-    this.stream.point(point.x, point.y);
+  var point = map.latLngToLayerPoint(new L.LatLng(y, x));
+  this.stream.point(point.x, point.y);
 }
 
 function translatePoint(d) {
-    var point = map.latLngToLayerPoint(new L.LatLng(d[1],d[0]));
-
-    return "translate(" + point.x + "," + point.y + ")";
+  var point = map.latLngToLayerPoint(new L.LatLng(d[1],d[0]));
+  return "translate(" + point.x + "," + point.y + ")";
 }
 
 function coordToLatLon(coord) {
-var point = map.layerPointToLatLng(new L.Point(coord[0],coord[1]));
-return point;
+  var point = map.layerPointToLatLng(new L.Point(coord[0],coord[1]));
+  return point;
 }
-
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
