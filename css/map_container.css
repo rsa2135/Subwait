@@ -31,6 +31,12 @@ html,
   svg {
       position: relative;
   }
+
+  .stop {
+    fill: black;
+    stroke: white;
+    stroke-width: 0.1rem;
+  }
   /*path {
       fill: yellow;
       stroke-width: 2px;
@@ -43,7 +49,7 @@ html,
   }
   .waypoints {
       fill: black;
-      opacity: 0;
+      /*opacity: 0;*/
   }
 }
 .drinks {
@@ -87,19 +93,23 @@ svg {
 }
 path {
    fill: none;
-   stroke-width: 4px;
+   stroke-width: 2px;
 }
 
-path.true {
+/*path.true {
    stroke:#3366FF;
-}
+}*/
 
 path.false {
    stroke:#990099;
    display:none;
 }
 
-#marker {
+#marker1 {
+   fill: yellow;
+}
+
+#marker2 {
    fill: yellow;
 }
 
@@ -108,6 +118,7 @@ path.false {
    position: absolute;
    bottom: 15px;
 }
+
 
 .axis path,
 .axis line {
@@ -121,9 +132,9 @@ path.false {
  stroke:white;
 }
 
-.area {
+/*.area {
  fill: #3366FF;
-}
+}*/
 
 .empty {
    fill: #000;
@@ -132,6 +143,14 @@ path.false {
 
 .navbar-inverse {
    background-color:#F1F100;
+}
+
+.line-number1 {
+  stroke: black;
+}
+
+.line-number2 {
+  stroke: black;
 }
 
 .overlay {

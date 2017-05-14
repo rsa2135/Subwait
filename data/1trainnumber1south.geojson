@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:07",
-        "departure": "1/9/13 12:07",
+        "departure": "1/9/13 12:08",
         "line": "1",
         "scheduled": true,
         "station": "242ND STREET-BWAY (Van Cortland Park)",
@@ -39,7 +39,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:08",
-        "departure": "1/9/13 12:08",
+        "departure": "1/9/13 12:20",
         "line": "1",
         "scheduled": true,
         "station": "238TH STREET-BWAY",
@@ -253,7 +253,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:20",
-        "departure": "1/9/13 12:20",
+        "departure": "1/9/13 12:25",
         "line": "1",
         "scheduled": true,
         "station": "168TH STREET - BWAY- WASHINGTON HGTS",
@@ -287,7 +287,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:25",
-        "departure": "1/9/13 12:25",
+        "departure": "1/9/13 12:31",
         "line": "1",
         "scheduled": true,
         "station": "137TH STREET - BWAY (City College)",
@@ -369,7 +369,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:31",
-        "departure": "1/9/13 12:31",
+        "departure": "1/9/13 12:33",
         "line": "1",
         "scheduled": true,
         "station": "103RD STREET - BWAY",
@@ -459,7 +459,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:33",
-        "departure": "1/9/13 12:33",
+        "departure": "1/9/13 12:39",
         "line": "1",
         "scheduled": true,
         "station": "96TH STREET - BWAY",
@@ -565,7 +565,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:39",
-        "departure": "1/9/13 12:39",
+        "departure": "1/9/13 12:44",
         "line": "1",
         "scheduled": true,
         "station": "66TH STREET - BWAY (Lincoln Center)",
@@ -751,7 +751,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:44",
-        "departure": "1/9/13 12:44",
+        "departure": "1/9/13 12:59",
         "line": "1",
         "scheduled": true,
         "station": "42ND ST. - TIMES SQ.",
@@ -929,7 +929,7 @@
       "type": "Feature",
       "properties": {
         "arrival": "1/9/13 12:59",
-        "departure": "1/9/13 12:59",
+        "departure": "1/9/13 1:05",
         "line": "1",
         "scheduled": true,
         "station": "CHAMBERS STREET - IRT",

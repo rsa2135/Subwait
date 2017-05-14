@@ -6,13 +6,17 @@
   "dependencies": {
     "d3": "^4.8.0",
     "d3-interpolate": "^1.1.4",
+    "file-system": "^2.2.2",
     "gtfs-realtime-bindings": "0.0.4",
+    "gtfs2geojson": "^2.0.0",
     "json-loader": "^0.5.4",
     "leaflet": "^1.0.3",
     "moment": "^2.18.1",
     "webpack-dev-server": "^2.4.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tap": "^10.3.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
