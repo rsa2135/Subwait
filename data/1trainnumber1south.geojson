@@ -4,13 +4,39 @@
     {
       "type": "Feature",
       "properties": {
+        "arrival": "1/9/13 12:00",
+        "departure": "1/9/13 12:07",
+        "line": "1",
+        "scheduled": true,
+        "station": "242ND STREET-BWAY (Van Cortland Park)",
+        "traininday": "0",
+        "stationnumber": "0",
+        "laststation": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.898583,
+            40.889248000933826
+          ],
+          [
+            -73.898583,
+            40.889248000933826
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "arrival": "1/9/13 12:07",
         "departure": "1/9/13 12:08",
         "line": "1",
         "scheduled": true,
         "station": "242ND STREET-BWAY (Van Cortland Park)",
         "traininday": "0",
-        "stationnumber": "0",
+        "stationnumber": "1",
         "laststation": false
       },
       "geometry": {
@@ -44,7 +70,7 @@
         "scheduled": true,
         "station": "238TH STREET-BWAY",
         "traininday": "0",
-        "stationnumber": "1",
+        "stationnumber": "2",
         "laststation": false
       },
       "geometry": {
@@ -258,7 +284,7 @@
         "scheduled": true,
         "station": "168TH STREET - BWAY- WASHINGTON HGTS",
         "traininday": "0",
-        "stationnumber": "2",
+        "stationnumber": "3",
         "laststation": false
       },
       "geometry": {
@@ -292,7 +318,7 @@
         "scheduled": true,
         "station": "137TH STREET - BWAY (City College)",
         "traininday": "0",
-        "stationnumber": "3",
+        "stationnumber": "4",
         "laststation": false
       },
       "geometry": {
@@ -374,7 +400,7 @@
         "scheduled": true,
         "station": "103RD STREET - BWAY",
         "traininday": "0",
-        "stationnumber": "4",
+        "stationnumber": "5",
         "laststation": false
       },
       "geometry": {
@@ -464,7 +490,7 @@
         "scheduled": true,
         "station": "96TH STREET - BWAY",
         "traininday": "0",
-        "stationnumber": "5",
+        "stationnumber": "6",
         "laststation": false
       },
       "geometry": {
@@ -570,7 +596,7 @@
         "scheduled": true,
         "station": "66TH STREET - BWAY (Lincoln Center)",
         "traininday": "0",
-        "stationnumber": "6",
+        "stationnumber": "7",
         "laststation": false
       },
       "geometry": {
@@ -756,7 +782,7 @@
         "scheduled": true,
         "station": "42ND ST. - TIMES SQ.",
         "traininday": "0",
-        "stationnumber": "7",
+        "stationnumber": "8",
         "laststation": false
       },
       "geometry": {
@@ -928,13 +954,13 @@
     {
       "type": "Feature",
       "properties": {
-        "arrival": "1/9/13 12:59",
-        "departure": "1/9/13 1:05",
+        "arrival": "1/9/13 12:59 am",
+        "departure": "1/9/13 1:05 am",
         "line": "1",
         "scheduled": true,
         "station": "CHAMBERS STREET - IRT",
         "traininday": "0",
-        "stationnumber": "8",
+        "stationnumber": "9",
         "laststation": false
       },
       "geometry": {
@@ -1340,7 +1366,7 @@
         "scheduled": true,
         "station": "SOUTH FERRY TERMINAL",
         "traininday": "0",
-        "stationnumber": "9",
+        "stationnumber": "10",
         "laststation": true
       },
       "geometry": {
