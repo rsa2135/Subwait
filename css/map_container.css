@@ -47,7 +47,7 @@ html,
     align-content: center;
   }
 
-  .circle {
+  .line-circle {
     font-size: 13px;
     font-weight: 700;
     display: inline;
@@ -58,15 +58,15 @@ html,
     border-radius: 50%;
   }
 
-  #red-line {
+  .red-line {
     background: #EE352E;
   }
 
-  #green-line {
+  .green-line {
     background: #00933C;
   }
 
-  #blue-line {
+  .blue-line {
     background: #0039A6;
   }
 
@@ -84,7 +84,7 @@ html,
     align-content: center;
   }
 
-  #start-button {
+  /*#start-button {
     font-size: 18px;
     font-weight: 700;
     color: white;
@@ -97,7 +97,7 @@ html,
     align-self: center;
     align-content: center;
     cursor: pointer;
-  }
+  }*/
 
   svg {
       position: relative;
@@ -179,6 +179,13 @@ path.false {
 #marker1 {
    fill: yellow;
 }
+#marker0 {
+   fill: yellow;
+}
+
+#marker2 {
+   fill: yellow;
+}
 
 .mrkr {
    fill: yellow;
@@ -224,7 +231,7 @@ path.false {
    background-color:#F1F100;
 }
 
-.line-number1 {
+text {
   stroke: black;
 }
 
