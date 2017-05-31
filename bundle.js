@@ -1899,7 +1899,7 @@ function loadLocale(name) {
             module && module.exports) {
         try {
             oldLocale = globalLocale._abbr;
-            __webpack_require__(152)("./" + name);
+            __webpack_require__(153)("./" + name);
             // because defineLocale currently also sets the global locale, we
             // want to undo that for lazy loaded locales
             getSetGlobalLocale(oldLocale);
@@ -4534,7 +4534,7 @@ return hooks;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(153)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(154)(module)))
 
 /***/ }),
 /* 1 */
@@ -4545,10 +4545,10 @@ return hooks;
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_0__src_color__["h"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_0__src_color__["g"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__src_color__["f"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_lab__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_lab__ = __webpack_require__(138);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_1__src_lab__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__src_lab__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_cubehelix__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_cubehelix__ = __webpack_require__(137);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__src_cubehelix__["a"]; });
 
 
@@ -5053,31 +5053,31 @@ function basis(t1, v0, v1, v2, v3) {
 /* unused harmony reexport interpolateNumber */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_object__ = __webpack_require__(15);
 /* unused harmony reexport interpolateObject */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_round__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_round__ = __webpack_require__(144);
 /* unused harmony reexport interpolateRound */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_string__ = __webpack_require__(17);
 /* unused harmony reexport interpolateString */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_transform_index__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__src_transform_index__ = __webpack_require__(146);
 /* unused harmony reexport interpolateTransformCss */
 /* unused harmony reexport interpolateTransformSvg */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_zoom__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__src_zoom__ = __webpack_require__(148);
 /* unused harmony reexport interpolateZoom */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__src_rgb__ = __webpack_require__(16);
 /* unused harmony reexport interpolateRgb */
 /* unused harmony reexport interpolateRgbBasis */
 /* unused harmony reexport interpolateRgbBasisClosed */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__src_hsl__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__src_hsl__ = __webpack_require__(141);
 /* unused harmony reexport interpolateHsl */
 /* unused harmony reexport interpolateHslLong */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__src_lab__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__src_lab__ = __webpack_require__(142);
 /* unused harmony reexport interpolateLab */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__src_hcl__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__src_hcl__ = __webpack_require__(140);
 /* unused harmony reexport interpolateHcl */
 /* unused harmony reexport interpolateHclLong */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__src_cubehelix__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__src_cubehelix__ = __webpack_require__(139);
 /* unused harmony reexport interpolateCubehelix */
 /* unused harmony reexport interpolateCubehelixLong */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__src_quantize__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__src_quantize__ = __webpack_require__(143);
 /* unused harmony reexport quantize */
 
 
@@ -33121,8 +33121,11 @@ return zhTw;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapAndRoutesSetup__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_correcting_interval__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_correcting_interval___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_correcting_interval__);
+
 
 
 
@@ -33133,9 +33136,7 @@ return zhTw;
 const svg = __WEBPACK_IMPORTED_MODULE_0_d3__["select"](__WEBPACK_IMPORTED_MODULE_3__mapAndRoutesSetup__["a" /* map */].getPanes().overlayPane).append("svg");
 /* unused harmony export svg */
 
-const g = svg.append("g").attr("class", "leaflet-zoom-hide");
-/* unused harmony export g */
-
+// export const g = svg.append("g").attr("class", "leaflet-zoom-hide");
 
 // Converting cartesian to coordinate sapce
 const transform = __WEBPACK_IMPORTED_MODULE_0_d3__["geoTransform"]({
@@ -33165,116 +33166,190 @@ function coordToLatLon(coord) {
 let topLeft;
 let bottomRight;
 let tweenToggle = 0;
-
-let time = __WEBPACK_IMPORTED_MODULE_2_moment___default()();
-let timer;
-let timeFactor = 5 ;
-
-//Note: delete date
-let clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()([2017, 1, 5]);
+let clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()();
 let screenclock;
-
-const startClock = () => {
-  screenclock = document.getElementById('clock');
-  clock.interval = setInterval(() => {
-    clock.add(1, "second");
-    screenclock.innerHTML = clock.format("h:mm:ss a");
-  }, 1000 / (timeFactor * 60));
-};
+const timeSpeed = 30;
+const timeFactor = 10;
 let currentLineRunning = [];
-// startClock()
+let timer;
 let fileNameSouth;
+let fileNameNorth;
+let clickCounter = 0;
+
 __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.line-circle').click(function(event){
+  clickCounter += 1
+  if (timer) {
+    __WEBPACK_IMPORTED_MODULE_5_correcting_interval___default.a.clearCorrectingInterval(timer);
+    clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()('2017-01-01');
+    screenclock.innerHTML = clock.format("hh:mm:ss a");
+  }
+
+  let clearRunning = svg.selectAll('.leaflet-zoom-hide')
+                      .remove();
+
   fileNameSouth = `data/${event.currentTarget.id}South.geojson`;
+  fileNameNorth = `data/${event.currentTarget.id}North.geojson`;
 
   __WEBPACK_IMPORTED_MODULE_0_d3__["queue"]()
   .defer(__WEBPACK_IMPORTED_MODULE_0_d3__["json"], fileNameSouth)
-  .defer(__WEBPACK_IMPORTED_MODULE_0_d3__["json"], 'data/stops.geojson')
-  .await(function(error, south, stops) {
+  .defer(__WEBPACK_IMPORTED_MODULE_0_d3__["json"], fileNameNorth)
+  .await(function(error, south, north) {
     if (error) throw error;
     let totalTrains = parseInt(south.features[0].properties.totaltrains);
 
     currentLineRunning.push(parseInt(south.features[0].properties.line));
 
-    // let clearRunning = g.selectAll(".line" + currentLineRunning)
-    //                     .remove();
-    // Clicking the start button instantiate the clock
+    // Creating a hashmap with all the train times, each key points at an array that holds
+    // then umber of the trinain the day and the section of the route.
+    let timesMapSouth = {};
+    let timesMapNorth = {};
+    let train = 0;
+    let section = 0;
+    while (south.features[section].properties[`arrival${train}`] ) {
+      if (!timesMapSouth[south.features[section].properties[`arrival${train}`]]) {
+        timesMapSouth[south.features[section].properties[`arrival${train}`]] = [{"trainInDay": train, "routeSection": section}];
+      } else {
+        timesMapSouth[south.features[section].properties[`arrival${train}`]].push({"trainInDay": train, "routeSection": section});
+      }
+      if ((!south.features[section].properties[`arrival${train + 1}`]) && (section < 37)) {
+        section++;
+        train = 0;
+      } else {
+        train++;
+      }
+    }
+    train = 0;
+    section = 0;
 
-    // $('#start-button').click(function() {
-      setTimeout(function() {
-        clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()([2017, 1, 5]);
-        startClock();
-        svg.selectAll(".line-" + currentLineRunning[0])
-           .remove();
-        // .attr("style", "opacity:0")
+    while (north.features[section].properties[`arrival${train}`] ) {
+      if (!timesMapNorth[north.features[section].properties[`arrival${train}`]]) {
+        timesMapNorth[north.features[section].properties[`arrival${train}`]] = [{"trainInDay": train, "routeSection": section}];
+      } else {
+        timesMapNorth[north.features[section].properties[`arrival${train}`]].push({"trainInDay": train, "routeSection": section});
+      }
+      if ((!north.features[section].properties[`arrival${train + 1}`]) && (section < 37)) {
+        section++;
+        train = 0;
+      } else {
+        train++;
+      }
+    }
 
-        if (currentLineRunning.length > 1) {
-          currentLineRunning = currentLineRunning.slice(1);
-        }
-        for (let i = 0; i < totalTrains; i++) {
-          callback1(south, stops, i);
-        }
-      }, 0);
+    clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()('2017-01-01');
+
+    screenclock = document.getElementById('clock');
+
+    var clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()('2017-01-01');
+    var interval = 1000 / timeFactor; // ms
+
+    var startTime = Date.now();
+
+    timer = __WEBPACK_IMPORTED_MODULE_5_correcting_interval___default.a.setCorrectingInterval(function() {
+      let clickDetected = clickCounter
+      console.log(clickDetected);
+      console.log(clickCounter);
+      clock.add(1000 * timeSpeed, 'ms');
+      screenclock.innerHTML = clock.format("hh:mm:ss a");
+
+      if (clock.day() ===  1) {
+        __WEBPACK_IMPORTED_MODULE_5_correcting_interval___default.a.clearCorrectingInterval(timer);
+        svg.selectAll('.leaflet-zoom-hide')
+                            .remove();
+        clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()('2017-01-01');
+        screenclock.innerHTML = clock.format("hh:mm:ss a");
+      }
+
+      if (timesMapSouth[clock.format("HH:mm:ss")]) {
+
+        timesMapSouth[clock.format("HH:mm:ss")].forEach(trainToAnimate => {
+          callback1(south, trainToAnimate, "S");
+        });
+      }
+
+      if (timesMapNorth[clock.format("HH:mm:ss")]) {
+        timesMapNorth[clock.format("HH:mm:ss")].forEach(trainToAnimate => {
+          callback1(north, trainToAnimate, "N");
+        });
+      }
+
+    }, interval);
+
   });
 });
 
-function callback1(data, test, j) {
-
-  const g = svg.append("g")
-               .attr("class", "leaflet-zoom-hide")
-               .attr("class", "line-1");
+function callback1(data, currentTrain, direction) {
 
   // Binding the features to the data and appending to the screen
   // All features will be added, however thier initial opacity will be 0
   // (on the trip.# class attribute)
-  const feature = g.selectAll("path")
-                   .data(data.features)
-                   .enter().append("path")
-                   .attr("class", function (d) {
-                      return "one" + j+ "-trip" + (d.properties.stationnumber);
-                   })
-                   .attr("id", function (d) {
-                      return d.properties.laststation;
-                   })
-                   .attr("style", "opacity:0")
-                   .attr("line", "line-one");
+  let feature;
+  let marker;
+  let label;
+  let exists;
+  let g;
+  let section = currentTrain.routeSection;
+  let train = currentTrain.trainInDay;
 
-  const pointsArray = [];
 
-  let points = g.selectAll(".point")
-                .data(pointsArray);
+    exists = svg.selectAll(`.line-1-train-${train}-${direction}`);
 
-  let elemEnter = g.append('g')
-                   .attr("class", "mrkr" + j);
+    if (exists.empty()) {
+      g = svg.append("g")
+             .attr("class", `leaflet-zoom-hide line-1-train-${train}-${direction}`);
 
-  let marker1 = elemEnter.append("circle")
-                .attr("r", 10)
-                .attr("id", "marker" + j)
-                .attr("stroke", "black")
-                .attr("fill", "yellow")
-                .attr('style','opacity: 0.0');
 
-  elemEnter.append("text")
-           .text("1")
-           .attr("stroke", "#000000")
-           .attr("class", "line-number1" + j)
-           .style("text-anchor", "middle")
-           .attr("dy", ".3em");
+      feature = g.selectAll("path")
+         .data(data.features)
+         .enter()
+         .append("path")
+         .attr("class", function (d) {
+           return "one" + train + "-section" + (d.properties.stationnumber) +"-"+ (direction);
+         })
+         .attr("id", function (d) {
+           return d.properties.laststation;
+         })
+         .attr("style", "opacity:0")
+         .attr("line", "line-one");
 
-  reset(test);
+         let elemEnter = g.append('g')
+         .attr("class", "mrkr" + train);
+
+         marker = elemEnter.append("circle")
+         .attr("r", 10)
+         .attr("id", "marker" + train + "-" + direction)
+         .attr("stroke", "black")
+         .attr("fill", "yellow")
+         .attr('style','opacity: 0.0');
+
+         label = elemEnter.append("text")
+         .text("1")
+         .attr("id", "label" + train + "-" + direction)
+         .attr("stroke", "#000000")
+         .attr("class", "line-number1" + train + "-" + direction)
+         .style("text-anchor", "middle")
+         .attr("dy", ".3em");
+
+
+    } else {
+      g = svg.select(`.line-1-train-${train}-${direction}`);
+      feature = g.selectAll("path");
+      marker = g.selectAll(`#mrkr${train}-${direction}`);
+      label = g.selectAll(`#label${train}-${direction}`);
+    }
+
+  reset();
 
   let i = 0;
 
-  // Start iterating over the path's elements and reveal each one (through opacity)
-    function iterate() {
       const emptyData = [];
-
-      let path = g.select("path.one" + j + "-trip" + i)
+      // console.log("path.one" + train + "-section" + section);
+      let path = g.select("path.one" + train + "-section" + section +"-"+ direction)
                     .attr("style", "opacity: 0.0")
-                    .call(transition);
-
+                    .call(transition, data)
+                    .call(pathStartPoint);
 
       function pathStartPoint(path) {
+
         let d = path.attr('d');
 
         let dsplitted = d.split("L")[0].slice(1).split(",");
@@ -33285,48 +33360,42 @@ function callback1(data, test, j) {
       }
 
       let startPoint = pathStartPoint(path);
-      marker1.attr("transform", "translate(" + startPoint[0] + "," + startPoint[1] + ")");
+      marker.attr("transform", "translate(" + startPoint[0] + "," + startPoint[1] + ")");
+      label.attr("transform", "translate(" + startPoint[0] + "," + startPoint[1] + ")");
 
       path.each(function(d) {
         //add the translation of the map's g element
         startPoint[0] = startPoint[0]; //+ topLeft[0];
         startPoint[1] = startPoint[1]; //+ topLeft[1];
         let newLatLon = coordToLatLon(startPoint);
-        pointsArray.push([newLatLon.lng,newLatLon.lat]);
+
       });
 
-      function transition(path) {
+      function transition(path, data) {
 
-        path.transition()
-            .delay(function(d) {
-              if (d.properties.stationnumber === "0") {
-                const start = Date.parse("1/9/13 00:00:00");
-                const finish = Date.parse(eval(`d.properties.arrival${j}`));
-                const duration = (finish - start) / 60000;
-                return (duration * (1/timeFactor) * 1000);
-              } else {
-                return 0;
-              }
-            })
+        var kus = data;
+
+        path.transition(data)
+
             .duration(function(d) {
-              const start = Date.parse(eval(`d.properties.arrival${j}`));
-              const finish = Date.parse(eval(`d.properties.departure${j}`));
-              const duration = (finish - start) / 60000;
-              return (duration * (1/timeFactor) * 1000);
+
+              const start = __WEBPACK_IMPORTED_MODULE_2_moment___default()(d.properties[`arrival${train}`], 'HH:mm:ss');
+              const finish = __WEBPACK_IMPORTED_MODULE_2_moment___default()(d.properties[`departure${train}`], 'HH:mm:ss');
+              const duration = __WEBPACK_IMPORTED_MODULE_2_moment___default.a.duration(finish.diff(start)).as('milliseconds');
+
+              const durationMinutes = (duration / timeSpeed / timeFactor); // 60000;
+              return (durationMinutes);// * (1/timeFactor) * 1000);
             })
-            .ease(__WEBPACK_IMPORTED_MODULE_0_d3__["easeLinear"])
+            // .ease(d3.easeLinear)
             .attrTween("stroke-dasharray", tweenDash)
             .on("end", function (d) {
 
-              i++;
-              let nextPath = svg.select("path.one" + j + "-trip" + i);
-              let attributes = nextPath.node();
-
-              if (attributes.id === "true"){
+              if (d.properties.laststation) {
                 g.remove();
-                // elemEnter.remove();
+
               } else {
-                iterate();
+
+                return;
               }
             });
 
@@ -33337,39 +33406,23 @@ function callback1(data, test, j) {
         let i = __WEBPACK_IMPORTED_MODULE_0_d3__["interpolateString"]("0," + l, l + "," + l); // interpolation of stroke-dasharray style attr
 
         return function (t) {
-          let marker1 = __WEBPACK_IMPORTED_MODULE_0_d3__["select"]("#marker" + j);
+          let marker = __WEBPACK_IMPORTED_MODULE_0_d3__["select"](`#marker${train}-${direction}`);
           let p = path.node().getPointAtLength(t * l);
-          marker1.attr("transform", "translate(" + p.x + "," + p.y + ")")//move marker
+          marker.attr("transform", "translate(" + p.x + "," + p.y + ")")//move marker
                  .attr('style','opacity:0.8');
 
-          let label1 = __WEBPACK_IMPORTED_MODULE_0_d3__["select"](".line-number1");
-          label1.attr("transform", "translate(" + p.x + "," + p.y + ")")//move text in marker
-                .attr('style','opacity:0.8');
+          label.attr("transform", "translate(" + p.x + "," + p.y + ")")//move text in marker
+                .attr('style','opacity:1')
+                .style("text-anchor", "middle");
 
           return i(t);
         };
       }
-  } //end of iterate
 
-  iterate();
-
-  __WEBPACK_IMPORTED_MODULE_4_jquery___default()('#begin').click(function(){
-    __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.overlay').fadeOut(250);
-    __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.box').fadeIn(250);
-    setTimeout(function(){
-        updateTimer();
-        iterate();
-    },500);
-
-});
-
-
-  function reset(test, ss) {
-      let bounds = d3path.bounds(test);
+  function reset() {
+      let bounds = d3path.bounds(data);
       topLeft = bounds[0];
       bottomRight = bounds[1];
-      // topLeft = bounds[0];
-      // bottomRight = bounds[1];
 
       svg.attr("width", bottomRight[0] - topLeft[0] + 100)
          .attr("height", bottomRight[1] - topLeft[1] + 100)
@@ -33378,16 +33431,7 @@ function callback1(data, test, j) {
       g.attr("transform", "translate(" + (-topLeft[0]+50) + "," + (-topLeft[1]+50)+ ")");
 
       feature.attr("d", d3path);
-
-      //TODO: Figure out why this doesn't work as points.attr...
-      g.selectAll(".point")
-       .attr("transform",function(d) {
-          return translatePoint(d);
-      });
-
   }
-  // iterate();
-
 }
 
 function translatePoint(d) {
@@ -33401,292 +33445,16 @@ function coordToLatLon(coord) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-///Checking second train with same function
-function callback2(data, test) {
-  const g = svg.append("g")
-               .attr("class", "leaflet-zoom-hide")
-               .attr("class", "line-2");
-  // Binding the features to the data and appending to the screen
-  // All features will be added, however thier initial opacity will be 0
-  // (on the trip.# class attribute)
-  const feature = g.selectAll("path")
-                   .data(data.features)
-                   .enter().append("path")
-                   .attr("class", function (d) {
-                      return "s-trip" + (d.properties.stationnumber);
-                   })
-                   .attr("id", function (d) {
-                      return d.properties.laststation;
-                   })
-                   .attr("style", "opacity:0");
-
-  const pointsArray = [];
-  let points = g.selectAll(".point")
-                .data(pointsArray);
-
-  let elemEnter = g.append('g')
-                   .attr("class", "mrkr2");
-
-  let marker2 = elemEnter.append("circle")
-                .attr("r", 10)
-                .attr("id", "marker2")
-                .attr("stroke", "black")
-                .attr('style','opacity: 0.8');
-
-  elemEnter.append("text")
-           .text("S")
-           .attr("class", "line-number2")
-           .style("text-anchor", "middle")
-           .attr("dy", ".3em")
-           .attr("stroke", "black");
-
-
-
-  // let marker2 = g.append("circle")
-  //               .attr("r", 10)
-  //               .attr("id", "marker2")
-  //               .attr("stroke", "black")
-  //               .attr('style','opacity: 0.8');
-  //
-  // let label = g.append("text")
-  //              .text("1")
-  //              .attr("class", "line-number")
-  //              .style("text-anchor", "middle")
-  //              .attr("dy", ".3em")
-  //              .attr({
-  //                "alignment-baseline": "middle",
-  //                "text-anchor": "middle"
-  //              });
-
-  // map.on("moveend", reset(test));
-  // map.on("zoomend", reset(test));
-  __WEBPACK_IMPORTED_MODULE_3__mapAndRoutesSetup__["a" /* map */].on("zoomend", function(e) {
-    reset(test);
-  });
-
-  __WEBPACK_IMPORTED_MODULE_3__mapAndRoutesSetup__["a" /* map */].on("moveend", function(e) {
-    reset(test);
-  });
-
-  reset(test);
-
-  let i = 0;
-
-  // Start iterating over the path's elements and reveal each one (through opacity)
-  function iterate() {
-    const emptyData = [];
-
-    // let emptyPath = areaChartSvg.append("path")
-    //   .datum(emptyData)
-    //   .attr("class", "empty");
-    let path = g.select("path.s-trip" + i)
-                  .attr("style", "opacity: 0.7")
-                  .call(transition);
-
-
-    function pathStartPoint(path) {
-      let d = path.attr('d');
-
-      let dsplitted = d.split("L")[0].slice(1).split(",");
-      let point = [];
-      point[0] = parseInt(dsplitted[0]);
-      point[1] = parseInt(dsplitted[1]);
-      return point;
-    }
-
-    let startPoint = pathStartPoint(path);
-    marker2.attr("transform", "translate(" + startPoint[0] + "," + startPoint[1] + ")");
-
-    path.each(function(d) {
-      //add the translation of the map's g element
-      startPoint[0] = startPoint[0]; //+ topLeft[0];
-      startPoint[1] = startPoint[1]; //+ topLeft[1];
-      let newLatLon = coordToLatLon(startPoint);
-      pointsArray.push([newLatLon.lng,newLatLon.lat]);
-
-      // points = g.selectAll(".point")
-      //           .data(pointsArray)
-      //           .enter()
-      //           .append('circle')
-      //           .attr("r",5)
-      //           .attr("class",function(d){
-      //             if(d[2]) {
-      //               return "startPoint point";
-      //             } else {
-      //               return "endPoint point";
-      //             }
-      //           })
-      //           .attr("transform",function(d){
-      //               return translatePoint(d);
-      //           });
-
-        if(d.properties.hasfare) { //transition marker to show full taxi
-          // marker
-          //   .transition()
-          //   .duration(500)
-          //   .attr("r",5)
-          //   .attr('style','opacity:1');
-          // } else { //Transition marker to show empty taxi
-          //   marker
-          //   .transition()
-          //   .duration(500)
-          //   .attr("r",10)
-          //   .attr('style','opacity:1');
-          }
-      });
-
-    function transition(path) {
-      // g.selectAll
-
-      path.transition()
-
-          .duration(function(d) {
-            // console.log(d.properties.arrival)
-            const start = Date.parse(d.properties.arrival);
-            const finish = Date.parse(d.properties.departure);
-            const duration = (finish - start) / 60000;
-            return (duration * (1/timeFactor) * 1000);
-          })
-          .attrTween("stroke-dasharray", tweenDash)
-          .on("end", function (d) {
-            // if(d.properties.hasfare) {
-            //   running.fare += parseFloat(d.properties.fare);
-            //   running.surcharge += parseFloat(d.properties.surcharge);
-            //   running.mtatax += parseFloat(d.properties.mtatax);
-            //   running.tip += parseFloat(d.properties.tip);
-            //   running.tolls += parseFloat(d.properties.tolls);
-            //   running.total += parseFloat(d.properties.total);
-            //   running.passengers += parseFloat(d.properties.passengers);
-            //   for(var p = 0;p<d.properties.passengers;p++){
-            //     $('.passengerGlyphs').append('<span class="glyphicon glyphicon-user"></span>');
-            //   }
-            //   // updateRunning();
-            // }
-
-            i++;
-            let nextPath = svg.select("path.s-trip" + i);
-            let attributes = nextPath.node();
-            // console.log(attributes)
-            if (attributes.id === "true"){
-              // clearTimeout(timer);
-              // console.log(attributes)
-            } else {
-              iterate();
-            }
-          });
-
-    }
-
-    function tweenDash(d) {
-      let l = path.node().getTotalLength();
-      let i = __WEBPACK_IMPORTED_MODULE_0_d3__["interpolateString"]("0," + l, l + "," + l); // interpolation of stroke-dasharray style attr
-
-      return function (t) {
-        let marker2 = __WEBPACK_IMPORTED_MODULE_0_d3__["select"]("#marker2");
-        let p = path.node().getPointAtLength(t * l);
-        marker2.attr("transform", "translate(" + p.x + "," + p.y + ")");//move marker
-
-        let label2 = __WEBPACK_IMPORTED_MODULE_0_d3__["select"](".line-number2");
-        // let p = path.node().getPointAtLength(t * l);
-        label2.attr("transform", "translate(" + p.x + "," + p.y + ")");//move marker
-
-        // if (tweenToggle == 0) {
-        //   tweenToggle = 1;
-        //   let newCenter = map.layerPointToLatLng(new L.Point(p.x,p.y));
-        //   map.panTo(newCenter, 14);
-        // } else {
-        //   tweenToggle = 0;
-        // }
-        //update chart data every X frames
-        // if(chartInterval == 5) {
-        //   chartInterval = 0;
-        //   let decimalHour = parseInt(time.format('H')) + parseFloat(time.format('m')/60);
-        //
-        //     if(isNaN(d.properties.fare)){
-        //       d.properties.fare = 0;
-        //     }
-        //
-        //   var incrementalFare = d.properties.fare*t;
-        //
-        //   dummyData.push({
-        //     "time": decimalHour,
-        //     "runningFare": running.fare + parseFloat(incrementalFare)
-        //   });
-        //
-        //   chartPath.attr("d", area); //redraw area chart
-        //   if(d.properties.hasfare === false) { //draw purple area for nonfare time
-        //     emptyData.push({
-        //       "time": decimalHour,
-        //       "runningFare": running.fare + parseFloat(incrementalFare)
-        //     });
-        //
-        //     emptyPath.attr("d", area);
-        //   }
-        //
-        //   markerLine
-        //     .attr('x1', x(decimalHour))
-        //     .attr('x2', x(decimalHour));
-        //
-        // } else {
-        //   chartInterval++;
-        // }
-
-        return i(t);
-      };
-    }
-  }
-
-  iterate();
-
-  function reset(test) {
-      let bounds = d3path.bounds(test);
-      topLeft = bounds[0];
-      bottomRight = bounds[1];
-
-      svg.attr("width", bottomRight[0] - topLeft[0] + 100)
-         .attr("height", bottomRight[1] - topLeft[1] + 100)
-         .style("left", topLeft[0]-50 + "px")
-         .style("top", topLeft[1]-50 + "px");
-
-      g.attr("transform", "translate(" + (-topLeft[0]+50) + "," + (-topLeft[1]+50)+ ")");
-
-      feature.attr("d", d3path);
-
-      //TODO: Figure out why this doesn't work as points.attr...
-      g.selectAll(".point")
-       .attr("transform",function(d) {
-          return translatePoint(d);
-      });
-
-  }
-  // iterate();
-
-}
-
-
 /***/ }),
 /* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_leaflet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_routes__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_routes__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_routes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_routes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_stops__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_stops__ = __webpack_require__(151);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_stops___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__data_stops__);
 
 
@@ -33770,7 +33538,7 @@ const stop = __WEBPACK_IMPORTED_MODULE_0_leaflet___default.a.geoJSON(__WEBPACK_I
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__train_movement_js__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__train_movement2_js__ = __webpack_require__(133);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_d3__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_d3__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_d3_interpolate__ = __webpack_require__(8);
@@ -33779,6 +33547,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // import { map, layer, coloring } from './mapAndRoutesSetup';
 
 
+// import * as clock from './clockTest.js';
 
 
 
@@ -33789,6 +33558,83 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 136 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! correcting-interval 2.0.0 | Copyright 2014 Andrew Duthie | MIT License */
+/* jshint evil: true */
+;(function(global, factory) {
+  // Use UMD pattern to expose exported functions
+  if (typeof exports === 'object') {
+    // Expose to Node.js
+    module.exports = factory();
+  } else if (true) {
+    // Expose to RequireJS
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  }
+
+  // Expose to global object (likely browser window)
+  var exports = factory();
+  for (var prop in exports) {
+    global[prop] = exports[prop];
+  }
+}(this, function() {
+  // Track running intervals
+  var numIntervals = 0,
+    intervals = {};
+
+  // Polyfill Date.now
+  var now = Date.now || function() {
+    return new Date().valueOf();
+  };
+
+  var setCorrectingInterval = function(func, delay) {
+    var id = numIntervals++,
+      planned = now() + delay;
+
+    // Normalize func as function
+    switch (typeof func) {
+      case 'function':
+        break;
+      case 'string':
+        var sFunc = func;
+        func = function() {
+          eval(sFunc);
+        };
+        break;
+      default:
+        func = function() { };
+    }
+
+    function tick() {
+      func();
+
+      // Only re-register if clearCorrectingInterval was not called during function
+      if (intervals[id]) {
+        planned += delay;
+        intervals[id] = setTimeout(tick, planned - now());
+      }
+    }
+
+    intervals[id] = setTimeout(tick, delay);
+    return id;
+  };
+
+  var clearCorrectingInterval = function(id) {
+    clearTimeout(intervals[id]);
+    delete intervals[id];
+  };
+
+  return {
+    setCorrectingInterval: setCorrectingInterval,
+    clearCorrectingInterval: clearCorrectingInterval
+  };
+}));
+
+/***/ }),
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33861,7 +33707,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__define__["a" /* default */])(
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33983,7 +33829,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__define__["a" /* default */])(
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34022,7 +33868,7 @@ var cubehelixLong = cubehelix(__WEBPACK_IMPORTED_MODULE_1__color__["a" /* defaul
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34053,7 +33899,7 @@ var hclLong = hcl(__WEBPACK_IMPORTED_MODULE_1__color__["a" /* default */]);
 
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34084,7 +33930,7 @@ var hslLong = hsl(__WEBPACK_IMPORTED_MODULE_1__color__["a" /* default */]);
 
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34110,7 +33956,7 @@ function lab(start, end) {
 
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34122,7 +33968,7 @@ function lab(start, end) {
 
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34134,7 +33980,7 @@ function lab(start, end) {
 
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34168,12 +34014,12 @@ var identity = {
 
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__number__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__parse__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__parse__ = __webpack_require__(147);
 /* unused harmony export interpolateTransformCss */
 /* unused harmony export interpolateTransformSvg */
 
@@ -34242,11 +34088,11 @@ var interpolateTransformSvg = interpolateTransform(__WEBPACK_IMPORTED_MODULE_1__
 
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__decompose__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__decompose__ = __webpack_require__(145);
 /* harmony export (immutable) */ __webpack_exports__["a"] = parseCss;
 /* harmony export (immutable) */ __webpack_exports__["b"] = parseSvg;
 
@@ -34277,7 +34123,7 @@ function parseSvg(value) {
 
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34348,7 +34194,7 @@ function tanh(x) {
 
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -44608,7 +44454,7 @@ return jQuery;
 
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -109530,7 +109376,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -120885,7 +120731,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -134145,7 +133991,7 @@ L.control.layers = function (baseLayers, overlays, options) {
 //# sourceMappingURL=leaflet-src.map
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -134394,10 +134240,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 152;
+webpackContext.id = 153;
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
