@@ -33245,9 +33245,7 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.line-circle').click(function(ev
     var startTime = Date.now();
 
     timer = __WEBPACK_IMPORTED_MODULE_5_correcting_interval___default.a.setCorrectingInterval(function() {
-      let clickDetected = clickCounter
-      console.log(clickDetected);
-      console.log(clickCounter);
+
       clock.add(1000 * timeSpeed, 'ms');
       screenclock.innerHTML = clock.format("hh:mm:ss a");
 
@@ -33322,7 +33320,7 @@ function callback1(data, currentTrain, direction) {
          .attr('style','opacity: 0.0');
 
          label = elemEnter.append("text")
-         .text("1")
+         .text(`${data.features[0].properties.line}`)
          .attr("id", "label" + train + "-" + direction)
          .attr("stroke", "#000000")
          .attr("class", "line-number1" + train + "-" + direction)
