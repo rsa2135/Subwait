@@ -33168,24 +33168,74 @@ let bottomRight;
 let tweenToggle = 0;
 let clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()();
 let screenclock;
-const timeSpeed = 30;
-const timeFactor = 10;
+let timeSpeed = 15;
+let timeFactor = 10;
 let currentLineRunning = [];
 let timer;
 let fileNameSouth;
 let fileNameNorth;
 let clickCounter = 0;
+let speedController = 0;
+let interval;
+
+__WEBPACK_IMPORTED_MODULE_4_jquery___default()("button[name='forward']").click(function() {
+  if (speedController < 3) {
+    speedController += 1;
+  }
+  switch (speedController) {
+    case 1:
+      timeSpeed = 30;
+      timeFactor = (20 / 3);
+      break;
+    case 2:
+      timeSpeed = 30;
+      timeFactor = 7.5;
+      break;
+    case 3:
+      timeSpeed = 30;
+      timeFactor = 10;
+      break;
+    default:
+      timeSpeed = 15;
+      timeFactor = 10;
+  }
+  console.log(`speedController: ${speedController}, timeFactor: ${timeFactor}, timeSpeed: ${timeSpeed}`);
+});
+
+__WEBPACK_IMPORTED_MODULE_4_jquery___default()("button[name='backward']").click(function() {
+  if (speedController > -3) {
+    speedController -= 1;
+  }
+  switch (speedController) {
+    case -3:
+      timeSpeed = 1;
+      timeFactor = 1;
+      break;
+    case -2:
+      timeSpeed = 10;
+      timeFactor = 5;
+      break;
+    case -1:
+      timeSpeed = 10;
+      timeFactor = 10;
+      break;
+    default:
+      timeSpeed = 10;
+      timeFactor = 5;
+  }
+  console.log(`speedController: ${speedController}, timeFactor: ${timeFactor}, timeSpeed: ${timeSpeed}`);
+});
+
 
 __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.line-circle').click(function(event){
-  clickCounter += 1
-  if (timer) {
+  if (screenclock) {
     __WEBPACK_IMPORTED_MODULE_5_correcting_interval___default.a.clearCorrectingInterval(timer);
     clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()('2017-01-01');
     screenclock.innerHTML = clock.format("hh:mm:ss a");
   }
 
   let clearRunning = svg.selectAll('.leaflet-zoom-hide')
-                      .remove();
+                        .remove();
 
   fileNameSouth = `data/${event.currentTarget.id}South.geojson`;
   fileNameNorth = `data/${event.currentTarget.id}North.geojson`;
@@ -33205,13 +33255,15 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.line-circle').click(function(ev
     let timesMapNorth = {};
     let train = 0;
     let section = 0;
+
     while (south.features[section].properties[`arrival${train}`] ) {
+
       if (!timesMapSouth[south.features[section].properties[`arrival${train}`]]) {
         timesMapSouth[south.features[section].properties[`arrival${train}`]] = [{"trainInDay": train, "routeSection": section}];
       } else {
         timesMapSouth[south.features[section].properties[`arrival${train}`]].push({"trainInDay": train, "routeSection": section});
       }
-      if ((!south.features[section].properties[`arrival${train + 1}`]) && (section < 37)) {
+      if ((!south.features[section].properties[`arrival${train + 1}`]) && (section < south.features.length - 1)) {
         section++;
         train = 0;
       } else {
@@ -33227,7 +33279,7 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.line-circle').click(function(ev
       } else {
         timesMapNorth[north.features[section].properties[`arrival${train}`]].push({"trainInDay": train, "routeSection": section});
       }
-      if ((!north.features[section].properties[`arrival${train + 1}`]) && (section < 37)) {
+      if ((!north.features[section].properties[`arrival${train + 1}`]) && (section < north.features.length - 1)) {
         section++;
         train = 0;
       } else {
@@ -33239,10 +33291,10 @@ __WEBPACK_IMPORTED_MODULE_4_jquery___default()('.line-circle').click(function(ev
 
     screenclock = document.getElementById('clock');
 
-    var clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()('2017-01-01');
-    var interval = 1000 / timeFactor; // ms
+    clock = __WEBPACK_IMPORTED_MODULE_2_moment___default()('2017-01-01');
+    interval = 1000 / timeFactor; // ms
 
-    var startTime = Date.now();
+    let startTime = Date.now();
 
     timer = __WEBPACK_IMPORTED_MODULE_5_correcting_interval___default.a.setCorrectingInterval(function() {
 
@@ -33536,7 +33588,7 @@ const stop = __WEBPACK_IMPORTED_MODULE_0_leaflet___default.a.geoJSON(__WEBPACK_I
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__train_movement2_js__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__trainMovement_js__ = __webpack_require__(133);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_d3__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_d3__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_d3_interpolate__ = __webpack_require__(8);

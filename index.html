@@ -2,27 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./css/map_container.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
-    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Subwait</title>
   </head>
   <body>
     <div id='mapContainer'>
 
       <nav class="nav">
-        <span id="clock"></span>
-        <span id="start-button"></span>
+        <div class="timer-controller">
+          <span id="clock">00:00:00 am</span>
+          <button type="button" name="backward">
+            <i class="fa fa-backward" aria-hidden="true"></i>
+            Slower
+          </button>
+          <button type="button" name="forward">Faster
+            <i class="fa fa-forward" aria-hidden="true"></i>
+          </button>
+        </div>
+
         <div class="line-selector">
-          <div class="line-circle red-line" id="red1">1</div>
-          <div class="line-circle red-line" id="red2">2</div>
-          <div class="line-circle red-line" id="red3">3</div>
-          <div class="line-circle green-line" id="green4">4</div>
-          <div class="line-circle green-line">5</div>
-          <div class="line-circle green-line">6</div>
-          <div class="line-circle blue-line">A</div>
-          <div class="line-circle blue-line">C</div>
-          <div class="line-circle blue-line">E</div>
+          <ul>
+            <li class="line-circle red-line" id="red1">1</li>
+            <li class="line-circle red-line" id="red2">2</li>
+            <li class="line-circle red-line" id="red3">3</li>
+            <li class="line-circle green-line" id="green4">4</li>
+            <li class="line-circle green-line" id="green5">5</li>
+            <li class="line-circle green-line" id="green6">6</li>
+            <li class="line-circle purple-line" id="purple7">7</li>
+            <li class="line-circle blue-line" id="blueA">A</li>
+            <li class="line-circle blue-line" id="blueC">C</li>
+            <li class="line-circle blue-line" id="blueE">E</li>
+            <li class="line-circle silver-line" id="silverS">S</li>
+          </ul>
+          <ul>
+            <li class="line-circle orange-line" id="orangeB">B</li>
+            <li class="line-circle orange-line" id="orangeD">D</li>
+            <li class="line-circle orange-line" id="orangeF">F</li>
+            <li class="line-circle orange-line" id="orangeM">M</li>
+            <li class="line-circle lime-line" id="limeG">G</li>
+            <li class="line-circle brown-line" id="brownJ">J</li>
+            <li class="line-circle brown-line" id="brownZ">Z</li>
+            <li class="line-circle grey-line" id="greyL">L</li>
+            <li class="line-circle yellow-line" id="yellowN">N</li>
+            <li class="line-circle yellow-line" id="yellowQ">Q</li>
+            <li class="line-circle yellow-line" id="yellowR">R</li>
+          </ul>
         </div>
       </nav>
 

@@ -1,439 +1,149 @@
-/*#mapContainer {
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  color:#fff;
+}
+
+#mapContainer {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  height: 75px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}*/
-
-html,
-  body {
-      height: 100%;
-      width: 100%;
-  }
-  body {
-      margin: 0;
-  }
-
-  #mapContainer {
-      width: 100%;
-      height: 100%;
-  }
-
-  /*.start-modal {
-    height: 50%;
-    weight: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-  }*/
-
-  nav {
-    height: 65px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    z-index: 401;
-    display: flex;
-    justify-content: space-between;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
-  }
-
-  .line-selector {
-    display: block;
-    padding: 15px;
-    text-align: center;
-    align-self: center;
-    align-content: center;
-  }
-
-  .line-circle {
-    font-size: 13px;
-    font-weight: 700;
-    display: inline;
-    padding: 4px 8px;
-    height: 10px;
-    width: 10px;
-    margin-left: 4px;
-    border-radius: 50%;
-  }
-
-  .red-line {
-    background: #EE352E;
-  }
-
-  .green-line {
-    background: #00933C;
-  }
-
-  .blue-line {
-    background: #0039A6;
-  }
-
-  #clock {
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-    width: 150px;
-    margin: 10px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid black;
-    display: block;
-    align-self: center;
-    align-content: center;
-  }
-
-  /*#start-button {
-    font-size: 18px;
-    font-weight: 700;
-    color: white;
-    width: 150px;
-    margin: 10px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid black;
-    display: block;
-    align-self: center;
-    align-content: center;
-    cursor: pointer;
-  }*/
-
-  svg {
-      position: relative;
-  }
-
-  .stop {
-    fill: black;
-    stroke: white;
-    stroke-width: 0.1rem;
-  }
-  /*path {
-      fill: yellow;
-      stroke-width: 2px;
-      stroke: red;
-      stroke-opacity: 1;*/
-  }
-  .travelMarker {
-      fill: yellow;
-      opacity: 0.75;
-  }
-  .waypoints {
-      fill: black;
-      /*opacity: 0;*/
-  }
+  z-index: 401;
+  display: flex;
+  justify-content: space-between;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-.drinks {
-  stroke: black;
-  fill: red;
+
+.line-selector {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+  width: 400px;
 }
-.lineConnect {
-  fill: none;
-  stroke: black;
-  opacity: 1;
-}
-.locnames {
-  fill: black;
-  text-shadow: 1px 1px 1px #FFF, 3px 3px 5px #000;
-  font-weight: bold;
+
+.line-circle {
   font-size: 13px;
+  font-weight: 700;
+  display: inline;
+  padding: 4px 9px;
+  width: 10px;
+  margin-left: 4px;
+  border-radius: 50%;
 }
 
-/*a day in the life*/
-html,
-body {
-   height: 100%;
-   width: 100%;
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 4px;
 }
-body {
-   margin: 0;
-   color:#fff;
-}
-#map {
 
-   top: 50px;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   position: absolute;
-   width: auto;
-   height: auto;
+li {
+  text-align: center;
+  vertical-align: middle;
 }
+
+.red-line {
+  background: #EE352E;
+}
+
+.green-line {
+  background: #00933C;
+}
+
+.blue-line {
+  background: #0039A6;
+}
+
+.orange-line {
+  background: #FF6319;
+}
+
+.purple-line {
+  background: #B933AD;
+}
+
+.silver-line {
+  background: #808183;
+}
+
+.grey-line {
+  background: #A7A9AC;
+}
+
+.yellow-line {
+  background: #FCCC0A;
+}
+
+.brown-line {
+  background: #996633;
+}
+
+.lime-line {
+  background: #6CBE45;
+}
+
+.timer-controller {
+  display: flex;
+  align-items: center;
+}
+
+.timer-controller > button {
+  background: linear-gradient(rgba(255,255,255,.75), rgba(255,255,255,0));
+  height: 25px;
+  width: 70px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.56);
+  background-color: #aaa;
+  color: #111;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.timer-controller > button:hover {
+  background-color: #a8c0cb;
+}
+
+.timer-controller > button:active {
+  box-shadow: inset 0 0.33em 2em rgba(0,0,0,.67);
+}
+
+#clock {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+  display: block;
+  align-self: center;
+  align-content: center;
+}
+
 svg {
-   position: relative;
-}
-path {
-   fill: none;
-   stroke-width: 2px;
+  position: relative;
 }
 
-/*path.true {
-   stroke:#3366FF;
-}*/
-
-path.false {
-   stroke:#990099;
-   display:none;
+.stop {
+  fill: black;
+  stroke: white;
+  stroke-width: 0.1rem;
 }
-
-#marker1 {
-   fill: yellow;
-}
-#marker0 {
-   fill: yellow;
-}
-
-#marker2 {
-   fill: yellow;
-}
-
-.mrkr {
-   fill: yellow;
-}
-
-#marker {
-   fill: yellow;
-}
-
-#marker2 {
-   fill: yellow;
-}
-
-
-.areaChart {
-   position: absolute;
-   bottom: 15px;
-}
-
-
-.axis path,
-.axis line {
-     fill: none;
-     stroke: #FFF;
-     shape-rendering: crispEdges;
-     stroke-width:1;
-}
-
-.axis text {
- stroke:white;
-}
-
-/*.area {
- fill: #3366FF;
-}*/
-
-.empty {
-   fill: #000;
-}
-
-
-.navbar-inverse {
-   background-color:#F1F100;
-}
-
-text {
-  stroke: black;
-}
-
-.line-number2 {
-  stroke: black;
-}
-
-.overlay {
-   position: relative;
-   top: 50%;
-   bottom: 0;
-   height: auto;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
-   color:#333333;
-   z-index: 410;
-
-}
-
-.popup {
-   position: relative;
-   top: 50%;
-   bottom: 0;
-   height: auto;
-   -webkit-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   transform: translateY(-50%);
-   color: #333333;
-   width: 60%;
-   z-index: 410;;
-   display:none;
-}
-
-.areaChartBox {
-   position: absolute;
-   bottom:38px;
-   right:15px;
-   left:15px;
-   width:auto;
-   height:140px;
-}
-
-.dateTimeBox {
-   position: absolute;
-   top: 65px;
-   left: 15px;
-   width: 300px;
-}
-.legendBox {
-   position: absolute;
-   top: 220px;
-   left: 15px;
-   width: 300px;
-}
-.newBox {
-   position: absolute;
-   top: 448px;
-   left: 15px;
-   width: 300px;
-}
-
-.totalsBox {
-   position: absolute;
-   top: 65px;
-   right: 15px;
-   width: 300px;
-}
-
-.totalsBox p {
-   font-size: 20px;
-   margin-bottom: 0;
-}
-
-.running {
-   float:right;
-}
-
-.tolls {
-   border-bottom: 1px solid #fff;
-}
-
-.box {
-   background:rgba(0, 0, 0, 0.61);
-   padding: 10px;
-   box-sizing: border-box;
-   border-radius: 6px;
-   display:none;
-}
-
-.boxHeader {
-   font-size:2em;
-}
-
-.startPoint {
-   fill:rgba(84, 255, 84, 0.64);
-}
-
-.endPoint {
-   fill:rgba(219, 62, 62, 0.79);
-}
-
-.time {
-
-   font-size: 3em;
-}
-
-.readableTime {
-   position: relative;
-   top: -5px;
-}
-
-
-.date {
-   font-size: 18px;
-}
-
-.passengerGlyphs .glyphicon {
-   margin-right: 2px;
-}
-
-.passengerGlyphs {
-   width: 170px;
-   margin: 0 auto;
-}
-
-.markerLine {
-   stroke:yellow;
-}
-
-.navbar-inverse .navbar-brand {
-   color: #333;
-}
-
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-   color: #000;
-}
-
-.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
-   color: #000;
-}
-
-.legendItem svg {
-   height: 40px;
-   width: 40px;
-}
-
-.legendItem p {
-   display: inline-block;
-   position: relative;
-   top: -14px;
-   left:10px;
-}
-.legendItem {
-   height:32px;
-}
-
-li iframe {
-   position: relative;
-   top: 15px;
-}
-
-li .fb-like {
-   position: relative;
-   top: -14px;
-}
-
-li>div {
-   padding:15px 15px;
-   color: #777;
-}
-
-li>div:hover {
-    color: #000;
-   cursor:pointer;
-}
-
-.panel-heading>.glyphicon {
-   float:right;
-   position:relative;
-   top:-14px;
-}
-
-.panel-heading>.glyphicon:hover {
-   cursor:pointer;
-}
-
-p .label {
-   position: relative;
-   top: -2px;
-}
-
-.badges {
-   text-align:center;
-}
-
-.badges img {
-    margin: 0 5px;
-}
-
-.twitter-button {
-   padding: 16px 0px;
-}
-
-html { -webkit-font-smoothing: antialiased; }
